@@ -16,3 +16,18 @@ function createloginInfo (loginInfo) {
     storedFormData.push(loginInfo);
     localStorage.setItem('loginInfo', JSON.stringify(storedFormData));
 }
+function displayFormData() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    var outputDiv = document.createElement("div");
+    outputDiv.innerHTML = "<h3>Form Information:</h3>" +
+                          "<p><strong>Name:</strong> " + name + "</p>" +
+                          "<p><strong>Email:</strong> " + email + "</p>" +
+                          "<p><strong>Password:</strong> " + password + "</p>";
+
+
+                          
+                          document.getElementById("outputContainer").appendChild(outputDiv);
+}
